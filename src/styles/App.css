@@ -6,14 +6,15 @@
 
 #root {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .App {
     width: 800px;
 }
 
-.post{
+.post {
     display: flex;
     padding: 15px;
     border: 2px solid teal;
@@ -25,14 +26,38 @@
 .post-enter {
     transform: translateX(-350px);
 }
+
 .post-enter-active {
     transform: translateX(350px);
     transition: all 500ms ease-in;
 }
+
 .post-exit {
     opacity: 1;
 }
+
 .post-exit-active {
     transform: translateX(-350px);
     transition: all 500ms ease-in;
+}
+
+.navbar {
+    height: 50px;
+    align-items: center;
+    width: 100vw;
+    padding: 0 15px;
+    display: flex;
+    background: lightgray;
+}
+
+.navbar__links {
+    margin-left: auto;
+}
+
+.navbar__link {
+    margin: 0 15px 0 15px;
+}
+
+.post__btns {
+    display: flex;
 }
